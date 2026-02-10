@@ -1,7 +1,9 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { auth } from './firebase'
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+console.log("Firebase connected:", auth)
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
