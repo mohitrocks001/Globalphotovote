@@ -1,8 +1,7 @@
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB2NpCJYpkMWK6wk47LEKInkR-nAu3lbh8",
   authDomain: "picvote-1150a.firebaseapp.com",
@@ -12,5 +11,7 @@ const firebaseConfig = {
   appId: "1:783966047062:web:9ceac5aa3b208f81eb24f7"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);
